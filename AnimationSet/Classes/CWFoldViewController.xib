@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CWFoldViewController">
+            <connections>
+                <outlet property="bottomImageV" destination="yS0-wj-u2F" id="mdD-yU-pKW"/>
+                <outlet property="topImageV" destination="3Oo-ro-Y0R" id="bsw-jD-NSY"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="低头.png" translatesAutoresizingMaskIntoConstraints="NO" id="yS0-wj-u2F">
+                    <rect key="frame" x="86.5" y="278" width="241" height="180"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="241" id="5I5-YV-bS7"/>
+                        <constraint firstAttribute="height" constant="180" id="6xj-za-e9N"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="低头.png" translatesAutoresizingMaskIntoConstraints="NO" id="3Oo-ro-Y0R">
+                    <rect key="frame" x="86.5" y="278" width="241" height="180"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="180" id="Phx-PI-rf6"/>
+                        <constraint firstAttribute="width" constant="241" id="qaX-9O-8pm"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1j9-LU-tW0">
+                    <rect key="frame" x="86.5" y="188" width="241" height="360"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="241" id="OLL-9z-mdt"/>
+                        <constraint firstAttribute="height" constant="360" id="tuT-LO-OVg"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="7O2-aM-CbQ" appends="YES" id="yw8-LW-sOz"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="yS0-wj-u2F" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Q4g-Wr-fmX"/>
+                <constraint firstItem="1j9-LU-tW0" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="kQq-Jf-oup"/>
+                <constraint firstItem="3Oo-ro-Y0R" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="phj-Nm-WKI"/>
+                <constraint firstItem="1j9-LU-tW0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qC3-NU-o8E"/>
+                <constraint firstItem="yS0-wj-u2F" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="qbc-25-EkL"/>
+                <constraint firstItem="3Oo-ro-Y0R" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="uyz-9f-P9D"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+        </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="7O2-aM-CbQ">
+            <connections>
+                <action selector="pan:" destination="-1" id="rx3-AG-ix7"/>
+            </connections>
+        </panGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="低头.png" width="500" height="500"/>
+    </resources>
+</document>

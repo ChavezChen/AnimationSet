@@ -7,25 +7,80 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A15F1B11D90CC0C004464CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A15F1B01D90CC0C004464CB /* main.m */; };
-		1A15F1B41D90CC0C004464CB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A15F1B31D90CC0C004464CB /* AppDelegate.m */; };
-		1A15F1B71D90CC0C004464CB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A15F1B61D90CC0C004464CB /* ViewController.m */; };
 		1A15F1BA1D90CC0C004464CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A15F1B81D90CC0C004464CB /* Main.storyboard */; };
 		1A15F1BC1D90CC0C004464CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A15F1BB1D90CC0C004464CB /* Assets.xcassets */; };
 		1A15F1BF1D90CC0C004464CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A15F1BD1D90CC0C004464CB /* LaunchScreen.storyboard */; };
+		1A15F1CF1D90DDC7004464CB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A15F1C91D90DDC7004464CB /* ViewController.m */; };
+		1A15F1D01D90DDC7004464CB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A15F1CC1D90DDC7004464CB /* AppDelegate.m */; };
+		1A15F1D61D90DE08004464CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A15F1D41D90DE08004464CB /* main.m */; };
+		1A15F1D81D90DE90004464CB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A15F1D71D90DE90004464CB /* Info.plist */; };
+		1A15F1E01D90E493004464CB /* CWClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A15F1DE1D90E493004464CB /* CWClockViewController.m */; };
+		1A15F1E11D90E493004464CB /* CWClockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A15F1DF1D90E493004464CB /* CWClockViewController.xib */; };
+		1A15F1E41D90E52C004464CB /* CWClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A15F1E31D90E52C004464CB /* CWClockView.m */; };
+		1A15F1EA1D9106B1004464CB /* CWClipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A15F1E81D9106B1004464CB /* CWClipViewController.m */; };
+		1A15F1EB1D9106B1004464CB /* CWClipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A15F1E91D9106B1004464CB /* CWClipViewController.xib */; };
+		1A15F1F01D910DBF004464CB /* CWDrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A15F1EE1D910DBF004464CB /* CWDrawViewController.m */; };
+		1A15F1F11D910DBF004464CB /* CWDrawViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A15F1EF1D910DBF004464CB /* CWDrawViewController.xib */; };
+		1A15F1F81D911146004464CB /* CWBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A15F1F31D911146004464CB /* CWBezierPath.m */; };
+		1A15F1F91D911146004464CB /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A15F1F51D911146004464CB /* DrawView.m */; };
+		1A15F1FA1D911146004464CB /* HandleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A15F1F71D911146004464CB /* HandleView.m */; };
+		1A15F1FF1D91148C004464CB /* CWQQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A15F1FD1D91148C004464CB /* CWQQViewController.m */; };
+		1A15F2001D91148C004464CB /* CWQQViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A15F1FE1D91148C004464CB /* CWQQViewController.xib */; };
+		1A15F2031D911497004464CB /* BageVlaueBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A15F2021D911497004464CB /* BageVlaueBtn.m */; };
+		1A15F20C1D91192E004464CB /* CWFoldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A15F20A1D91192E004464CB /* CWFoldViewController.m */; };
+		1A15F20D1D91192E004464CB /* CWFoldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A15F20B1D91192E004464CB /* CWFoldViewController.xib */; };
+		1A15F2111D911CC8004464CB /* CWRotateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A15F2101D911CC8004464CB /* CWRotateViewController.m */; };
+		1A15F2141D911CD1004464CB /* CWChangeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A15F2131D911CD1004464CB /* CWChangeView.m */; };
+		1A15F2191D911F22004464CB /* CWDownProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A15F2171D911F22004464CB /* CWDownProgressViewController.m */; };
+		1A15F21A1D911F22004464CB /* CWDownProgressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A15F2181D911F22004464CB /* CWDownProgressViewController.xib */; };
+		1A15F21D1D911F3C004464CB /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A15F21C1D911F3C004464CB /* ProgressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1A15F1AC1D90CC0C004464CB /* AnimationSet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationSet.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A15F1B01D90CC0C004464CB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1A15F1B21D90CC0C004464CB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		1A15F1B31D90CC0C004464CB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1A15F1B51D90CC0C004464CB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1A15F1B61D90CC0C004464CB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1A15F1B91D90CC0C004464CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A15F1BB1D90CC0C004464CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A15F1BE1D90CC0C004464CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		1A15F1C01D90CC0C004464CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A15F1C81D90DDC7004464CB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1A15F1C91D90DDC7004464CB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1A15F1CB1D90DDC7004464CB /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1A15F1CC1D90DDC7004464CB /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1A15F1D41D90DE08004464CB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1A15F1D71D90DE90004464CB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A15F1DD1D90E493004464CB /* CWClockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWClockViewController.h; sourceTree = "<group>"; };
+		1A15F1DE1D90E493004464CB /* CWClockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWClockViewController.m; sourceTree = "<group>"; };
+		1A15F1DF1D90E493004464CB /* CWClockViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWClockViewController.xib; sourceTree = "<group>"; };
+		1A15F1E21D90E52C004464CB /* CWClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWClockView.h; sourceTree = "<group>"; };
+		1A15F1E31D90E52C004464CB /* CWClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWClockView.m; sourceTree = "<group>"; };
+		1A15F1E71D9106B1004464CB /* CWClipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWClipViewController.h; sourceTree = "<group>"; };
+		1A15F1E81D9106B1004464CB /* CWClipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWClipViewController.m; sourceTree = "<group>"; };
+		1A15F1E91D9106B1004464CB /* CWClipViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWClipViewController.xib; sourceTree = "<group>"; };
+		1A15F1ED1D910DBF004464CB /* CWDrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWDrawViewController.h; sourceTree = "<group>"; };
+		1A15F1EE1D910DBF004464CB /* CWDrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWDrawViewController.m; sourceTree = "<group>"; };
+		1A15F1EF1D910DBF004464CB /* CWDrawViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWDrawViewController.xib; sourceTree = "<group>"; };
+		1A15F1F21D911146004464CB /* CWBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWBezierPath.h; sourceTree = "<group>"; };
+		1A15F1F31D911146004464CB /* CWBezierPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWBezierPath.m; sourceTree = "<group>"; };
+		1A15F1F41D911146004464CB /* DrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
+		1A15F1F51D911146004464CB /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
+		1A15F1F61D911146004464CB /* HandleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandleView.h; sourceTree = "<group>"; };
+		1A15F1F71D911146004464CB /* HandleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandleView.m; sourceTree = "<group>"; };
+		1A15F1FC1D91148C004464CB /* CWQQViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWQQViewController.h; sourceTree = "<group>"; };
+		1A15F1FD1D91148C004464CB /* CWQQViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWQQViewController.m; sourceTree = "<group>"; };
+		1A15F1FE1D91148C004464CB /* CWQQViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWQQViewController.xib; sourceTree = "<group>"; };
+		1A15F2011D911497004464CB /* BageVlaueBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BageVlaueBtn.h; sourceTree = "<group>"; };
+		1A15F2021D911497004464CB /* BageVlaueBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BageVlaueBtn.m; sourceTree = "<group>"; };
+		1A15F2091D91192E004464CB /* CWFoldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWFoldViewController.h; sourceTree = "<group>"; };
+		1A15F20A1D91192E004464CB /* CWFoldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWFoldViewController.m; sourceTree = "<group>"; };
+		1A15F20B1D91192E004464CB /* CWFoldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWFoldViewController.xib; sourceTree = "<group>"; };
+		1A15F20F1D911CC8004464CB /* CWRotateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWRotateViewController.h; sourceTree = "<group>"; };
+		1A15F2101D911CC8004464CB /* CWRotateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWRotateViewController.m; sourceTree = "<group>"; };
+		1A15F2121D911CD1004464CB /* CWChangeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWChangeView.h; sourceTree = "<group>"; };
+		1A15F2131D911CD1004464CB /* CWChangeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWChangeView.m; sourceTree = "<group>"; };
+		1A15F2161D911F22004464CB /* CWDownProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWDownProgressViewController.h; sourceTree = "<group>"; };
+		1A15F2171D911F22004464CB /* CWDownProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWDownProgressViewController.m; sourceTree = "<group>"; };
+		1A15F2181D911F22004464CB /* CWDownProgressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWDownProgressViewController.xib; sourceTree = "<group>"; };
+		1A15F21B1D911F3C004464CB /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
+		1A15F21C1D911F3C004464CB /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +113,11 @@
 		1A15F1AE1D90CC0C004464CB /* AnimationSet */ = {
 			isa = PBXGroup;
 			children = (
-				1A15F1B21D90CC0C004464CB /* AppDelegate.h */,
-				1A15F1B31D90CC0C004464CB /* AppDelegate.m */,
-				1A15F1B51D90CC0C004464CB /* ViewController.h */,
-				1A15F1B61D90CC0C004464CB /* ViewController.m */,
+				1A15F1C61D90DDC7004464CB /* Classes */,
 				1A15F1B81D90CC0C004464CB /* Main.storyboard */,
 				1A15F1BB1D90CC0C004464CB /* Assets.xcassets */,
 				1A15F1BD1D90CC0C004464CB /* LaunchScreen.storyboard */,
-				1A15F1C01D90CC0C004464CB /* Info.plist */,
+				1A15F1D71D90DE90004464CB /* Info.plist */,
 				1A15F1AF1D90CC0C004464CB /* Supporting Files */,
 			);
 			path = AnimationSet;
@@ -74,9 +126,126 @@
 		1A15F1AF1D90CC0C004464CB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1A15F1B01D90CC0C004464CB /* main.m */,
+				1A15F1D41D90DE08004464CB /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1A15F1C61D90DDC7004464CB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1A15F2151D911ECE004464CB /* 圆形下载进度 */,
+				1A15F20E1D911C9A004464CB /* 旋转动画 */,
+				1A15F2081D9118E5004464CB /* 图片折叠 */,
+				1A15F1FB1D911466004464CB /* QQ未读消息拉扯消失 */,
+				1A15F1EC1D910DA2004464CB /* 画板 */,
+				1A15F1D91D90E1D7004464CB /* 手势解锁 */,
+				1A15F1E61D910599004464CB /* 图形裁剪 */,
+				1A15F1C71D90DDC7004464CB /* Main */,
+				1A15F1CA1D90DDC7004464CB /* Other */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		1A15F1C71D90DDC7004464CB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1A15F1C81D90DDC7004464CB /* ViewController.h */,
+				1A15F1C91D90DDC7004464CB /* ViewController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		1A15F1CA1D90DDC7004464CB /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				1A15F1CB1D90DDC7004464CB /* AppDelegate.h */,
+				1A15F1CC1D90DDC7004464CB /* AppDelegate.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		1A15F1D91D90E1D7004464CB /* 手势解锁 */ = {
+			isa = PBXGroup;
+			children = (
+				1A15F1DD1D90E493004464CB /* CWClockViewController.h */,
+				1A15F1DE1D90E493004464CB /* CWClockViewController.m */,
+				1A15F1DF1D90E493004464CB /* CWClockViewController.xib */,
+				1A15F1E21D90E52C004464CB /* CWClockView.h */,
+				1A15F1E31D90E52C004464CB /* CWClockView.m */,
+			);
+			name = "手势解锁";
+			sourceTree = "<group>";
+		};
+		1A15F1E61D910599004464CB /* 图形裁剪 */ = {
+			isa = PBXGroup;
+			children = (
+				1A15F1E71D9106B1004464CB /* CWClipViewController.h */,
+				1A15F1E81D9106B1004464CB /* CWClipViewController.m */,
+				1A15F1E91D9106B1004464CB /* CWClipViewController.xib */,
+			);
+			name = "图形裁剪";
+			sourceTree = "<group>";
+		};
+		1A15F1EC1D910DA2004464CB /* 画板 */ = {
+			isa = PBXGroup;
+			children = (
+				1A15F1ED1D910DBF004464CB /* CWDrawViewController.h */,
+				1A15F1EE1D910DBF004464CB /* CWDrawViewController.m */,
+				1A15F1EF1D910DBF004464CB /* CWDrawViewController.xib */,
+				1A15F1F21D911146004464CB /* CWBezierPath.h */,
+				1A15F1F31D911146004464CB /* CWBezierPath.m */,
+				1A15F1F41D911146004464CB /* DrawView.h */,
+				1A15F1F51D911146004464CB /* DrawView.m */,
+				1A15F1F61D911146004464CB /* HandleView.h */,
+				1A15F1F71D911146004464CB /* HandleView.m */,
+			);
+			name = "画板";
+			sourceTree = "<group>";
+		};
+		1A15F1FB1D911466004464CB /* QQ未读消息拉扯消失 */ = {
+			isa = PBXGroup;
+			children = (
+				1A15F1FC1D91148C004464CB /* CWQQViewController.h */,
+				1A15F1FD1D91148C004464CB /* CWQQViewController.m */,
+				1A15F1FE1D91148C004464CB /* CWQQViewController.xib */,
+				1A15F2011D911497004464CB /* BageVlaueBtn.h */,
+				1A15F2021D911497004464CB /* BageVlaueBtn.m */,
+			);
+			name = "QQ未读消息拉扯消失";
+			sourceTree = "<group>";
+		};
+		1A15F2081D9118E5004464CB /* 图片折叠 */ = {
+			isa = PBXGroup;
+			children = (
+				1A15F2091D91192E004464CB /* CWFoldViewController.h */,
+				1A15F20A1D91192E004464CB /* CWFoldViewController.m */,
+				1A15F20B1D91192E004464CB /* CWFoldViewController.xib */,
+			);
+			name = "图片折叠";
+			sourceTree = "<group>";
+		};
+		1A15F20E1D911C9A004464CB /* 旋转动画 */ = {
+			isa = PBXGroup;
+			children = (
+				1A15F20F1D911CC8004464CB /* CWRotateViewController.h */,
+				1A15F2101D911CC8004464CB /* CWRotateViewController.m */,
+				1A15F2121D911CD1004464CB /* CWChangeView.h */,
+				1A15F2131D911CD1004464CB /* CWChangeView.m */,
+			);
+			name = "旋转动画";
+			sourceTree = "<group>";
+		};
+		1A15F2151D911ECE004464CB /* 圆形下载进度 */ = {
+			isa = PBXGroup;
+			children = (
+				1A15F2161D911F22004464CB /* CWDownProgressViewController.h */,
+				1A15F2171D911F22004464CB /* CWDownProgressViewController.m */,
+				1A15F2181D911F22004464CB /* CWDownProgressViewController.xib */,
+				1A15F21B1D911F3C004464CB /* ProgressView.h */,
+				1A15F21C1D911F3C004464CB /* ProgressView.m */,
+			);
+			name = "圆形下载进度";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -105,6 +274,7 @@
 		1A15F1A41D90CC0C004464CB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CW;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = Chavez;
 				TargetAttributes = {
@@ -137,8 +307,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A15F1E11D90E493004464CB /* CWClockViewController.xib in Resources */,
+				1A15F1D81D90DE90004464CB /* Info.plist in Resources */,
+				1A15F2001D91148C004464CB /* CWQQViewController.xib in Resources */,
+				1A15F20D1D91192E004464CB /* CWFoldViewController.xib in Resources */,
+				1A15F21A1D911F22004464CB /* CWDownProgressViewController.xib in Resources */,
+				1A15F1F11D910DBF004464CB /* CWDrawViewController.xib in Resources */,
 				1A15F1BF1D90CC0C004464CB /* LaunchScreen.storyboard in Resources */,
 				1A15F1BC1D90CC0C004464CB /* Assets.xcassets in Resources */,
+				1A15F1EB1D9106B1004464CB /* CWClipViewController.xib in Resources */,
 				1A15F1BA1D90CC0C004464CB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,9 +327,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A15F1B71D90CC0C004464CB /* ViewController.m in Sources */,
-				1A15F1B41D90CC0C004464CB /* AppDelegate.m in Sources */,
-				1A15F1B11D90CC0C004464CB /* main.m in Sources */,
+				1A15F1EA1D9106B1004464CB /* CWClipViewController.m in Sources */,
+				1A15F2031D911497004464CB /* BageVlaueBtn.m in Sources */,
+				1A15F1F81D911146004464CB /* CWBezierPath.m in Sources */,
+				1A15F20C1D91192E004464CB /* CWFoldViewController.m in Sources */,
+				1A15F1E41D90E52C004464CB /* CWClockView.m in Sources */,
+				1A15F2141D911CD1004464CB /* CWChangeView.m in Sources */,
+				1A15F21D1D911F3C004464CB /* ProgressView.m in Sources */,
+				1A15F1CF1D90DDC7004464CB /* ViewController.m in Sources */,
+				1A15F1D61D90DE08004464CB /* main.m in Sources */,
+				1A15F1D01D90DDC7004464CB /* AppDelegate.m in Sources */,
+				1A15F1E01D90E493004464CB /* CWClockViewController.m in Sources */,
+				1A15F2111D911CC8004464CB /* CWRotateViewController.m in Sources */,
+				1A15F1F01D910DBF004464CB /* CWDrawViewController.m in Sources */,
+				1A15F1FA1D911146004464CB /* HandleView.m in Sources */,
+				1A15F1F91D911146004464CB /* DrawView.m in Sources */,
+				1A15F1FF1D91148C004464CB /* CWQQViewController.m in Sources */,
+				1A15F2191D911F22004464CB /* CWDownProgressViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
