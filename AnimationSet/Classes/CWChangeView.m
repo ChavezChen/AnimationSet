@@ -11,18 +11,22 @@
 
 
 
-static CGFloat const kAnimation1Duration = 0.5;
-static CGFloat const kAnimation2Duration = 0.5;
-static CGFloat const kAnimation3Duration = 5.0;
-static CGFloat const kAnimation4Duration = 5.0;
+static CGFloat const kAnimation1Duration = 0.25;
+static CGFloat const kAnimation2Duration = 0.25;
+static CGFloat const kAnimation3Duration = 3.0;
+static CGFloat const kAnimation4Duration = 3.0;
 
 
 
-static const CGFloat LineWidth = 100.0f;
-static const CGFloat Radius = 100.0f;
-static const CGFloat LineHeight = 8.0f;
-static const CGFloat LineGapHeight = 20.0f;
-static const CGFloat kAngle = 45;    // 三点曲线的角度大小
+static CGFloat const LineWidth = 100.0f;
+static CGFloat const Radius = 100.0f;
+static CGFloat const LineHeight = 8.0f;
+static CGFloat const LineGapHeight = 20.0f;
+static CGFloat const kAngle = 45;    // 三点曲线的角度大小
+
+static CGFloat const transX = 20;  // 动画在x轴上面的偏移
+
+
 #define CenterPositionX self.frame.size.width/2
 #define CenterPositionY self.frame.size.height/2
 
@@ -58,11 +62,15 @@ static const CGFloat kAngle = 45;    // 三点曲线的角度大小
     _topLineLayer.contentsScale = [UIScreen mainScreen].scale;
     _topLineLayer.lineWidth = LineHeight; // 必须设置layer的高度
     _topLineLayer.lineCap = kCALineCapRound;
+
+    _topLineLayer.frame = CGRectMake(CenterPositionX - LineWidth/2, TopY, LineWidth, LineHeight);
     UIBezierPath * path = [UIBezierPath bezierPath];
     path.lineWidth = LineHeight;
-    [path moveToPoint:CGPointMake(CenterPositionX - LineWidth/2, TopY)];
-    [path addLineToPoint:CGPointMake(CenterPositionX + LineWidth/2, TopY)];
+    [path moveToPoint:CGPointZero];
+    [path addLineToPoint:CGPointMake(LineWidth, 0)];
     _topLineLayer.path = path.CGPath;
+    _topLineLayer.anchorPoint = CGPointMake(1, 0);
+    _topLineLayer.position = CGPointMake(self.layer.bounds.size.width/2 + LineWidth/2, TopY);
     [self.layer addSublayer:_topLineLayer];
     
     // 下横线
@@ -72,11 +80,14 @@ static const CGFloat kAngle = 45;    // 三点曲线的角度大小
     _bottomLineLayer.contentsScale = [UIScreen mainScreen].scale;
     _bottomLineLayer.lineWidth = LineHeight;
     _bottomLineLayer.lineCap = kCALineCapRound;
-    
+    _bottomLineLayer.frame = CGRectMake(CenterPositionX - LineWidth/2, BottomY, LineWidth, LineHeight);
     UIBezierPath * pathB = [UIBezierPath bezierPath];
     pathB.lineWidth = LineHeight;
-    [pathB moveToPoint:CGPointMake(CenterPositionX - LineWidth/2, BottomY)];
-    [pathB addLineToPoint:CGPointMake(CenterPositionX + LineWidth/2, BottomY)];
+
+    [pathB moveToPoint:CGPointZero];
+    [pathB addLineToPoint:CGPointMake(LineWidth, 0)];
+    _bottomLineLayer.anchorPoint = CGPointMake(1, 0);
+    _bottomLineLayer.position = CGPointMake(self.layer.bounds.size.width/2 + LineWidth/2, BottomY);
     _bottomLineLayer.path = pathB.CGPath;
     [self.layer addSublayer:_bottomLineLayer];
     
@@ -88,10 +99,12 @@ static const CGFloat kAngle = 45;    // 三点曲线的角度大小
     _changeLineLayer.lineWidth = LineHeight;
     _changeLineLayer.lineCap = kCALineCapRound;
     
+    _changeLineLayer.frame = CGRectMake(CenterPositionX - LineWidth/2, CenterPositionY, LineWidth, LineHeight);
+    
     UIBezierPath * pathC = [UIBezierPath bezierPath];
     pathC.lineWidth = LineHeight;
-    [pathC moveToPoint:CGPointMake(CenterPositionX - LineWidth/2, CenterPositionY)];
-    [pathC addLineToPoint:CGPointMake(CenterPositionX + LineWidth/2, CenterPositionY)];
+    [pathC moveToPoint:CGPointZero];
+    [pathC addLineToPoint:CGPointMake(LineWidth, 0)];
     _changeLineLayer.path = pathC.CGPath;
     [self.layer addSublayer:_changeLineLayer];
     
@@ -109,9 +122,10 @@ static const CGFloat kAngle = 45;    // 三点曲线的角度大小
         _changeLineLayer.affineTransform = CGAffineTransformMakeTranslation(10, 0);
         
         CABasicAnimation * animation = [CABasicAnimation animationWithKeyPath:@"transform.translation.x"];
-        animation.fromValue = @0;
-        animation.toValue = @10;
+//        animation.fromValue = @0;
+        animation.byValue = @10;
         [_changeLineLayer addAnimation:animation forKey:nil];
+        
     }
 }
 
@@ -124,7 +138,7 @@ static const CGFloat kAngle = 45;    // 三点曲线的角度大小
     [_bottomLineLayer removeFromSuperlayer];
     [self initLinesLayer];
     [self animation1];
-//    [self animation4];
+//    [self animation3];
 }
 
 - (void)animation1{
@@ -134,8 +148,8 @@ static const CGFloat kAngle = 45;    // 三点曲线的角度大小
     strokeAnimation.fromValue = @1.0;
     
     CABasicAnimation * positionAnimation = [CABasicAnimation animationWithKeyPath:@"position.x"];
-    positionAnimation.fromValue = @0;
-    positionAnimation.toValue = @-20;
+//    positionAnimation.fromValue = @0;
+    positionAnimation.byValue = @(-transX);
     
     CAAnimationGroup * groupAnimation = [CAAnimationGroup animation];
     groupAnimation.animations = @[strokeAnimation,positionAnimation];
@@ -146,12 +160,13 @@ static const CGFloat kAngle = 45;    // 三点曲线的角度大小
     groupAnimation.delegate = self;
     [groupAnimation setValue:@"animation1" forKey:@"animationName"];
     [_changeLineLayer addAnimation:groupAnimation forKey:nil];
+    
 }
 
 - (void)animation2{
     CABasicAnimation * positionAnimation = [CABasicAnimation animationWithKeyPath:@"position.x"];
-    positionAnimation.fromValue = @-20;
-    positionAnimation.toValue = @0;
+//    positionAnimation.fromValue = @-20;
+    positionAnimation.byValue = @(transX);
     
     _changeLineLayer.strokeEnd = 0.8;
     CABasicAnimation * strokeAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
@@ -180,18 +195,20 @@ static const CGFloat kAngle = 45;    // 三点曲线的角度大小
     _changeLineLayer.contentsScale = [UIScreen mainScreen].scale;
     _changeLineLayer.lineWidth = LineHeight;
     _changeLineLayer.lineCap = kCALineCapRound;
+    _changeLineLayer.frame = CGRectMake(CenterPositionX - LineWidth/2+transX, CenterPositionY+LineHeight*0.5, LineWidth, LineHeight);
+
     [self.layer addSublayer:_changeLineLayer];
 // 反复测试 45度最好
     CGFloat angle = Radians(kAngle);
     
-    CGFloat endPointX = CenterPositionX + Radius * cos(angle);
-    CGFloat endPointY = CenterPositionY - Radius * sin(angle);
+    CGFloat endPointX =  Radius * cos(angle);
+    CGFloat endPointY = - Radius * sin(angle);
     
     CGFloat controlPX = endPointX + Radius * tan(angle) * cos(angle);
-    CGFloat controlPY = CenterPositionY;
+    CGFloat controlPY = 0;
 
-    CGFloat startPointX = CenterPositionX;
-    CGFloat startPointY = CenterPositionY;
+    CGFloat startPointX = 0;
+    CGFloat startPointY = 0;
     
     // 三点画贝塞尔弧线
     UIBezierPath * path = [UIBezierPath bezierPath];
@@ -200,10 +217,10 @@ static const CGFloat kAngle = 45;    // 三点曲线的角度大小
     [path moveToPoint:CGPointMake(startPointX, startPointY)];
     [path addCurveToPoint:CGPointMake(endPointX, endPointY) controlPoint1:CGPointMake(startPointX, startPointY) controlPoint2:CGPointMake(controlPX, controlPY)];
     
-    UIBezierPath * path1 = [UIBezierPath bezierPathWithArcCenter:CGPointMake(CenterPositionX, CenterPositionY) radius:Radius startAngle:M_PI * 2-angle endAngle:M_PI+angle clockwise:NO];
+    UIBezierPath * path1 = [UIBezierPath bezierPathWithArcCenter:CGPointMake(0, 0) radius:Radius startAngle:M_PI * 2-angle endAngle:M_PI+angle clockwise:NO];
     [path appendPath:path1];
     
-    UIBezierPath * path2 = [UIBezierPath bezierPathWithArcCenter:CGPointMake(CenterPositionX, CenterPositionY) radius:Radius startAngle:M_PI+angle endAngle:M_PI+angle-M_PI*2 clockwise:NO]; // 最后一个参数为是否顺时针
+    UIBezierPath * path2 = [UIBezierPath bezierPathWithArcCenter:CGPointMake(0, 0) radius:Radius startAngle:M_PI+angle endAngle:M_PI+angle-M_PI*2 clockwise:NO]; // 最后一个参数为是否顺时针
     [path appendPath:path2];
     _changeLineLayer.path = path.CGPath;
     
@@ -229,7 +246,60 @@ static const CGFloat kAngle = 45;    // 三点曲线的角度大小
     groupAnimation.removedOnCompletion = YES;
     [groupAnimation setValue:@"animation3" forKey:@"animationName"];
     [_changeLineLayer addAnimation:groupAnimation forKey:nil];
+    
+    //平移量
+    CGFloat toValue = LineWidth *(1- cos(M_PI_4)) /2.0 ;
+    //finished 最终状态
+    CGAffineTransform transform1 = CGAffineTransformMakeRotation(-M_PI_4);
+    CGAffineTransform transform2 = CGAffineTransformMakeTranslation(toValue-(LineWidth * 0.5 + transX * 0.5), -transX * 0.5);
+    CGAffineTransform transform3 = CGAffineTransformMakeRotation(M_PI_4);
+    CGAffineTransform transform4 = CGAffineTransformMakeTranslation(toValue-(LineWidth * 0.5 + transX * 0.5), transX * 0.5);
 
+    CGAffineTransform transform = CGAffineTransformConcat(transform1, transform2);
+    _topLineLayer.affineTransform = transform;
+    transform = CGAffineTransformConcat(transform3, transform4);
+    _bottomLineLayer.affineTransform = transform;
+
+
+    //平移x
+    CABasicAnimation *translationAnimationX = [CABasicAnimation animationWithKeyPath:@"transform.translation.x"];
+    translationAnimationX.fromValue = [NSNumber numberWithFloat:0];
+//    translationAnimation.toValue = [NSNumber numberWithFloat:-toValue];
+    translationAnimationX.byValue = @(-45);
+    
+    
+    //角度关键帧 上横线的关键帧 0 - 10° - (-55°) - (-45°)
+    CAKeyframeAnimation *rotationAnimation1 = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation.z"];
+    rotationAnimation1.values = @[[NSNumber numberWithFloat:0],
+                                  [NSNumber numberWithFloat:Radians(10) ],
+                                  [NSNumber numberWithFloat:Radians(-10) - M_PI_4 ],
+                                  [NSNumber numberWithFloat:- M_PI_4 ]
+                                  ];
+    
+    
+    CAAnimationGroup *transformGroup1 = [CAAnimationGroup animation];
+    transformGroup1.animations = [NSArray arrayWithObjects:rotationAnimation1,translationAnimationX, nil];
+    transformGroup1.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+    transformGroup1.duration = kAnimation3Duration;
+    transformGroup1.removedOnCompletion = YES;
+    [_topLineLayer addAnimation:transformGroup1 forKey:nil];
+    
+    //角度关键帧 下横线的关键帧 0 - （-10°） - (55°) - (45°)
+    CAKeyframeAnimation *rotationAnimation2 = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation.z"];
+    rotationAnimation2.values = @[[NSNumber numberWithFloat:0],
+                                  [NSNumber numberWithFloat:Radians(-10) ],
+                                  [NSNumber numberWithFloat:Radians(10) + M_PI_4 ],
+                                  [NSNumber numberWithFloat: M_PI_4 ]
+                                  ];
+
+    
+    CAAnimationGroup *transformGroup2 = [CAAnimationGroup animation];
+    transformGroup2.animations = [NSArray arrayWithObjects:rotationAnimation2,translationAnimationX, nil];
+    transformGroup2.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+    transformGroup2.duration = kAnimation3Duration ;
+    transformGroup2.delegate = self;
+    transformGroup2.removedOnCompletion = YES;
+    [_bottomLineLayer addAnimation:transformGroup2 forKey:nil];
 }
 
 - (void)animation4{
@@ -238,27 +308,27 @@ static const CGFloat kAngle = 45;    // 三点曲线的角度大小
     
     CGFloat angle = Radians(kAngle);
 
-    CGFloat startPointX = CenterPositionX + Radius * cos(angle);
-    CGFloat startPointY = CenterPositionY - Radius * sin(angle);
+    CGFloat startPointX = Radius * cos(angle);
+    CGFloat startPointY = - Radius * sin(angle);
     
     CGFloat controlPX = startPointX + Radius * tan(angle) * cos(angle);
-    CGFloat controlPY = CenterPositionY;
+    CGFloat controlPY = 0;
     
-    CGFloat endPointX = CenterPositionX +LineWidth/2;
-    CGFloat endPointY = CenterPositionY;
+    CGFloat endPointX = LineWidth/2;
+    CGFloat endPointY = 0;
     
-   [path addArcWithCenter:CGPointMake(CenterPositionX, CenterPositionY) radius:Radius startAngle:M_PI+angle-M_PI*2 endAngle:M_PI+angle clockwise:YES];
+   [path addArcWithCenter:CGPointMake(0, 0) radius:Radius startAngle:M_PI+angle-M_PI*2 endAngle:M_PI+angle clockwise:YES];
 //
-    UIBezierPath * path1 = [UIBezierPath bezierPathWithArcCenter:CGPointMake(CenterPositionX, CenterPositionY) radius:Radius startAngle:M_PI+angle endAngle:M_PI * 2-angle clockwise:YES];
+    UIBezierPath * path1 = [UIBezierPath bezierPathWithArcCenter:CGPointMake(0, 0) radius:Radius startAngle:M_PI+angle endAngle:M_PI * 2-angle clockwise:YES];
     [path appendPath:path1];
 
     UIBezierPath * path2 = [UIBezierPath bezierPath];
-    [path addCurveToPoint:CGPointMake(endPointX, endPointY) controlPoint1:CGPointMake(startPointX, startPointY) controlPoint2:CGPointMake(controlPX, controlPY)];
+    [path addCurveToPoint:CGPointMake(endPointX, endPointY-4) controlPoint1:CGPointMake(startPointX, startPointY) controlPoint2:CGPointMake(controlPX, controlPY)];
     [path appendPath:path2];
     
     UIBezierPath * path3 = [UIBezierPath bezierPath];
-    [path moveToPoint:CGPointMake(endPointX, endPointY)];
-    [path addLineToPoint:CGPointMake(endPointX - LineWidth -10, endPointY)];
+    [path3 moveToPoint:CGPointMake(LineWidth-30, endPointY-4)];
+    [path3 addLineToPoint:CGPointMake(-30, endPointY-4)];
     [path appendPath:path3];
     _changeLineLayer.path = path.CGPath;
     
@@ -279,6 +349,52 @@ static const CGFloat kAngle = 45;    // 三点曲线的角度大小
     groupAnimation.delegate = self;
     [groupAnimation setValue:@"animation4" forKey:@"animationName"];
     [_changeLineLayer addAnimation:groupAnimation forKey:nil];
+    
+    // 还原
+    _topLineLayer.affineTransform = CGAffineTransformIdentity;
+    _bottomLineLayer.affineTransform = CGAffineTransformIdentity;
+    
+    
+    
+    //平移x
+    CABasicAnimation *translationAnimationX = [CABasicAnimation animationWithKeyPath:@"transform.translation.x"];
+    translationAnimationX.fromValue = [NSNumber numberWithFloat:-45];
+    //    translationAnimation.toValue = [NSNumber numberWithFloat:-toValue];
+    translationAnimationX.toValue = @(0);
+    
+    
+    //角度关键帧 上横线的关键帧 0 - 10° - (-55°) - (-45°)
+    CAKeyframeAnimation *rotationAnimation1 = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation.z"];
+    rotationAnimation1.values = @[[NSNumber numberWithFloat:- M_PI_4],
+                                  [NSNumber numberWithFloat:Radians(-10) - M_PI_4],
+                                  [NSNumber numberWithFloat:Radians(10)],
+                                  [NSNumber numberWithFloat:0 ]
+                                  ];
+    
+    
+    CAAnimationGroup *transformGroup1 = [CAAnimationGroup animation];
+    transformGroup1.animations = [NSArray arrayWithObjects:rotationAnimation1,translationAnimationX, nil];
+    transformGroup1.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+    transformGroup1.duration = kAnimation3Duration;
+    transformGroup1.removedOnCompletion = YES;
+    [_topLineLayer addAnimation:transformGroup1 forKey:nil];
+    
+    //角度关键帧 下横线的关键帧 0 - （-10°） - (55°) - (45°)
+    CAKeyframeAnimation *rotationAnimation2 = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation.z"];
+    rotationAnimation2.values = @[[NSNumber numberWithFloat:M_PI_4],
+                                  [NSNumber numberWithFloat:Radians(10) + M_PI_4 ],
+                                  [NSNumber numberWithFloat:Radians(-10) ],
+                                  [NSNumber numberWithFloat:0]
+                                  ];
+    
+    
+    CAAnimationGroup *transformGroup2 = [CAAnimationGroup animation];
+    transformGroup2.animations = [NSArray arrayWithObjects:rotationAnimation2,translationAnimationX, nil];
+    transformGroup2.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+    transformGroup2.duration = kAnimation3Duration ;
+    transformGroup2.delegate = self;
+    transformGroup2.removedOnCompletion = YES;
+    [_bottomLineLayer addAnimation:transformGroup2 forKey:nil];
     
 }
 

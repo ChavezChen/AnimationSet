@@ -44,7 +44,7 @@ static NSString * const ID = @"cell";
 }
 
 - (void)initDataSource{
-    NSArray * array = @[@"手势解锁",@"图形裁剪",@"画板(照片可缩小移动，长按照片可以涂鸦)",@"QQ气泡拉扯",@"图片折叠",@"趣味动画(点击屏幕开始动画)",@"圆形下载进度条"];
+    NSArray * array = @[@"手势解锁",@"图形裁剪(长按拖拽)",@"画板(照片可缩小移动，长按照片可以涂鸦)",@"QQ气泡拉扯",@"图片折叠",@"趣味动画(点击屏幕开始动画)",@"圆形下载进度条"];
     [self.dataSource addObjectsFromArray:array];
 }
 
