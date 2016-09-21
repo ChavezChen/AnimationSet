@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4032B56EC0E05C93177F32C7A428C63FB84EAA15",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "4032B56EC0E05C93177F32C7A428C63FB84EAA15" : 0,
+    "AF41B1B05FC35177CF3CB14EBC8481C9A127DF72" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "88A42D5E-4DE5-4988-8C4A-4D715BB22A24",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "4032B56EC0E05C93177F32C7A428C63FB84EAA15" : "AnimationSet\/",
+    "AF41B1B05FC35177CF3CB14EBC8481C9A127DF72" : "AnimationSet\/gif\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "AnimationSet",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "AnimationSet.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ChavezChen\/AnimationSet.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4032B56EC0E05C93177F32C7A428C63FB84EAA15"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ChavezChen\/gif.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AF41B1B05FC35177CF3CB14EBC8481C9A127DF72"
+    }
+  ]
+}

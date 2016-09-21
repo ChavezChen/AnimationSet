@@ -34,6 +34,10 @@
 		1A15F2191D911F22004464CB /* CWDownProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A15F2171D911F22004464CB /* CWDownProgressViewController.m */; };
 		1A15F21A1D911F22004464CB /* CWDownProgressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A15F2181D911F22004464CB /* CWDownProgressViewController.xib */; };
 		1A15F21D1D911F3C004464CB /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A15F21C1D911F3C004464CB /* ProgressView.m */; };
+		1A15F22C1D9274A3004464CB /* 111.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1A15F2281D9274A3004464CB /* 111.gif */; };
+		1A15F22D1D9274A3004464CB /* 222.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1A15F2291D9274A3004464CB /* 222.gif */; };
+		1A15F22E1D9274A3004464CB /* 333.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1A15F22A1D9274A3004464CB /* 333.gif */; };
+		1A15F22F1D9274A3004464CB /* 444.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1A15F22B1D9274A3004464CB /* 444.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +85,10 @@
 		1A15F2181D911F22004464CB /* CWDownProgressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWDownProgressViewController.xib; sourceTree = "<group>"; };
 		1A15F21B1D911F3C004464CB /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
 		1A15F21C1D911F3C004464CB /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
+		1A15F2281D9274A3004464CB /* 111.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 111.gif; sourceTree = "<group>"; };
+		1A15F2291D9274A3004464CB /* 222.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 222.gif; sourceTree = "<group>"; };
+		1A15F22A1D9274A3004464CB /* 333.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 333.gif; sourceTree = "<group>"; };
+		1A15F22B1D9274A3004464CB /* 444.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 444.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +121,7 @@
 		1A15F1AE1D90CC0C004464CB /* AnimationSet */ = {
 			isa = PBXGroup;
 			children = (
+				1A15F2271D9274A3004464CB /* gif */,
 				1A15F1C61D90DDC7004464CB /* Classes */,
 				1A15F1B81D90CC0C004464CB /* Main.storyboard */,
 				1A15F1BB1D90CC0C004464CB /* Assets.xcassets */,
@@ -248,6 +257,17 @@
 			name = "圆形下载进度";
 			sourceTree = "<group>";
 		};
+		1A15F2271D9274A3004464CB /* gif */ = {
+			isa = PBXGroup;
+			children = (
+				1A15F2281D9274A3004464CB /* 111.gif */,
+				1A15F2291D9274A3004464CB /* 222.gif */,
+				1A15F22A1D9274A3004464CB /* 333.gif */,
+				1A15F22B1D9274A3004464CB /* 444.gif */,
+			);
+			path = gif;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -307,14 +327,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A15F22E1D9274A3004464CB /* 333.gif in Resources */,
 				1A15F1E11D90E493004464CB /* CWClockViewController.xib in Resources */,
 				1A15F1D81D90DE90004464CB /* Info.plist in Resources */,
 				1A15F2001D91148C004464CB /* CWQQViewController.xib in Resources */,
 				1A15F20D1D91192E004464CB /* CWFoldViewController.xib in Resources */,
 				1A15F21A1D911F22004464CB /* CWDownProgressViewController.xib in Resources */,
 				1A15F1F11D910DBF004464CB /* CWDrawViewController.xib in Resources */,
+				1A15F22C1D9274A3004464CB /* 111.gif in Resources */,
 				1A15F1BF1D90CC0C004464CB /* LaunchScreen.storyboard in Resources */,
+				1A15F22F1D9274A3004464CB /* 444.gif in Resources */,
 				1A15F1BC1D90CC0C004464CB /* Assets.xcassets in Resources */,
+				1A15F22D1D9274A3004464CB /* 222.gif in Resources */,
 				1A15F1EB1D9106B1004464CB /* CWClipViewController.xib in Resources */,
 				1A15F1BA1D90CC0C004464CB /* Main.storyboard in Resources */,
 			);
@@ -494,6 +518,7 @@
 				1A15F1C51D90CC0C004464CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
