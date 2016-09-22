@@ -14,6 +14,7 @@
 #import "CWFoldViewController.h"
 #import "CWRotateViewController.h"
 #import "CWDownProgressViewController.h"
+#import "CWEatViewController.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -44,7 +45,7 @@ static NSString * const ID = @"cell";
 }
 
 - (void)initDataSource{
-    NSArray * array = @[@"手势解锁",@"图形裁剪(长按拖拽)",@"画板(照片可缩小移动，长按照片可以涂鸦)",@"QQ气泡拉扯",@"图片折叠",@"趣味动画(点击屏幕开始动画)",@"圆形下载进度条"];
+    NSArray * array = @[@"手势解锁",@"图形裁剪(长按拖拽)",@"画板(照片可缩小移动，长按照片可以涂鸦)",@"QQ气泡拉扯",@"图片折叠",@"趣味动画(点击屏幕开始动画)",@"圆形下载进度条",@"转转咬啊咬"];
     [self.dataSource addObjectsFromArray:array];
 }
 
@@ -68,40 +69,29 @@ static NSString * const ID = @"cell";
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     UIViewController *vc;
     switch (indexPath.row) {
-        case 0:{
-            CWClockViewController * vc0 = [[CWClockViewController alloc] init];
-            vc = vc0;
-        }
+        case 0:
+            vc = [[CWClockViewController alloc] init];
             break;
-        case 1:{
-            CWClipViewController * vc1 = [[CWClipViewController alloc] init];
-            vc = vc1;
-        }
+        case 1:
+            vc = [[CWClipViewController alloc] init];
             break;
-        case 2:{
-            CWDrawViewController *vc2 = [[CWDrawViewController alloc] init];
-            vc = vc2;
-        }
+        case 2:
+            vc = [[CWDrawViewController alloc] init];
             break;
-        case 3:{
-            CWQQViewController * vc3 = [[CWQQViewController alloc] init];
-            vc = vc3;
-        }
+        case 3:
+            vc = [[CWQQViewController alloc] init];
             break;
-        case 4:{
-            CWFoldViewController * vc4 = [[CWFoldViewController alloc] init];
-            vc = vc4;
-        }
+        case 4:
+            vc = [[CWFoldViewController alloc] init];
             break;
-        case 5:{
-            CWRotateViewController * vc5 = [[CWRotateViewController alloc] init];
-            vc = vc5;
-        }
+        case 5:
+            vc = [[CWRotateViewController alloc] init];
             break;
-        case 6:{
-            CWDownProgressViewController * vc6 = [[CWDownProgressViewController alloc] init];
-            vc = vc6;
-        }
+        case 6:
+            vc = [[CWDownProgressViewController alloc] init];
+            break;
+        case 7:
+            vc = [[CWEatViewController alloc] init];
             break;
         default:
             break;

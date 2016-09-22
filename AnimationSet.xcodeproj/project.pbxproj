@@ -34,10 +34,15 @@
 		1A15F2191D911F22004464CB /* CWDownProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A15F2171D911F22004464CB /* CWDownProgressViewController.m */; };
 		1A15F21A1D911F22004464CB /* CWDownProgressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A15F2181D911F22004464CB /* CWDownProgressViewController.xib */; };
 		1A15F21D1D911F3C004464CB /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A15F21C1D911F3C004464CB /* ProgressView.m */; };
-		1A15F22C1D9274A3004464CB /* 111.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1A15F2281D9274A3004464CB /* 111.gif */; };
-		1A15F22D1D9274A3004464CB /* 222.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1A15F2291D9274A3004464CB /* 222.gif */; };
-		1A15F22E1D9274A3004464CB /* 333.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1A15F22A1D9274A3004464CB /* 333.gif */; };
 		1A15F22F1D9274A3004464CB /* 444.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1A15F22B1D9274A3004464CB /* 444.gif */; };
+		1A15F2351D927DC1004464CB /* 1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1A15F2301D927DC1004464CB /* 1.gif */; };
+		1A15F2361D927DC1004464CB /* 2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1A15F2311D927DC1004464CB /* 2.gif */; };
+		1A15F2371D927DC1004464CB /* 3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1A15F2321D927DC1004464CB /* 3.gif */; };
+		1A15F2381D927DC1004464CB /* 4.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1A15F2331D927DC1004464CB /* 4.gif */; };
+		1A15F2391D927DC1004464CB /* 11.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1A15F2341D927DC1004464CB /* 11.gif */; };
+		1A15F2641D93CD16004464CB /* CWEatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A15F2621D93CD16004464CB /* CWEatViewController.m */; };
+		1A15F2651D93CD16004464CB /* CWEatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A15F2631D93CD16004464CB /* CWEatViewController.xib */; };
+		1A15F2681D93CD31004464CB /* EatRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A15F2671D93CD31004464CB /* EatRotate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,10 +90,17 @@
 		1A15F2181D911F22004464CB /* CWDownProgressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWDownProgressViewController.xib; sourceTree = "<group>"; };
 		1A15F21B1D911F3C004464CB /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
 		1A15F21C1D911F3C004464CB /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
-		1A15F2281D9274A3004464CB /* 111.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 111.gif; sourceTree = "<group>"; };
-		1A15F2291D9274A3004464CB /* 222.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 222.gif; sourceTree = "<group>"; };
-		1A15F22A1D9274A3004464CB /* 333.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 333.gif; sourceTree = "<group>"; };
 		1A15F22B1D9274A3004464CB /* 444.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 444.gif; sourceTree = "<group>"; };
+		1A15F2301D927DC1004464CB /* 1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 1.gif; sourceTree = "<group>"; };
+		1A15F2311D927DC1004464CB /* 2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 2.gif; sourceTree = "<group>"; };
+		1A15F2321D927DC1004464CB /* 3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 3.gif; sourceTree = "<group>"; };
+		1A15F2331D927DC1004464CB /* 4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 4.gif; sourceTree = "<group>"; };
+		1A15F2341D927DC1004464CB /* 11.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 11.gif; sourceTree = "<group>"; };
+		1A15F2611D93CD16004464CB /* CWEatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWEatViewController.h; sourceTree = "<group>"; };
+		1A15F2621D93CD16004464CB /* CWEatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWEatViewController.m; sourceTree = "<group>"; };
+		1A15F2631D93CD16004464CB /* CWEatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWEatViewController.xib; sourceTree = "<group>"; };
+		1A15F2661D93CD31004464CB /* EatRotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EatRotate.h; sourceTree = "<group>"; };
+		1A15F2671D93CD31004464CB /* EatRotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EatRotate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +155,7 @@
 		1A15F1C61D90DDC7004464CB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1A15F2601D93CCF4004464CB /* 转转吃 */,
 				1A15F2151D911ECE004464CB /* 圆形下载进度 */,
 				1A15F20E1D911C9A004464CB /* 旋转动画 */,
 				1A15F2081D9118E5004464CB /* 图片折叠 */,
@@ -260,12 +273,26 @@
 		1A15F2271D9274A3004464CB /* gif */ = {
 			isa = PBXGroup;
 			children = (
-				1A15F2281D9274A3004464CB /* 111.gif */,
-				1A15F2291D9274A3004464CB /* 222.gif */,
-				1A15F22A1D9274A3004464CB /* 333.gif */,
+				1A15F2301D927DC1004464CB /* 1.gif */,
+				1A15F2311D927DC1004464CB /* 2.gif */,
+				1A15F2321D927DC1004464CB /* 3.gif */,
+				1A15F2331D927DC1004464CB /* 4.gif */,
+				1A15F2341D927DC1004464CB /* 11.gif */,
 				1A15F22B1D9274A3004464CB /* 444.gif */,
 			);
 			path = gif;
+			sourceTree = "<group>";
+		};
+		1A15F2601D93CCF4004464CB /* 转转吃 */ = {
+			isa = PBXGroup;
+			children = (
+				1A15F2611D93CD16004464CB /* CWEatViewController.h */,
+				1A15F2621D93CD16004464CB /* CWEatViewController.m */,
+				1A15F2631D93CD16004464CB /* CWEatViewController.xib */,
+				1A15F2661D93CD31004464CB /* EatRotate.h */,
+				1A15F2671D93CD31004464CB /* EatRotate.m */,
+			);
+			name = "转转吃";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,20 +354,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A15F22E1D9274A3004464CB /* 333.gif in Resources */,
 				1A15F1E11D90E493004464CB /* CWClockViewController.xib in Resources */,
 				1A15F1D81D90DE90004464CB /* Info.plist in Resources */,
 				1A15F2001D91148C004464CB /* CWQQViewController.xib in Resources */,
 				1A15F20D1D91192E004464CB /* CWFoldViewController.xib in Resources */,
 				1A15F21A1D911F22004464CB /* CWDownProgressViewController.xib in Resources */,
 				1A15F1F11D910DBF004464CB /* CWDrawViewController.xib in Resources */,
-				1A15F22C1D9274A3004464CB /* 111.gif in Resources */,
+				1A15F2351D927DC1004464CB /* 1.gif in Resources */,
 				1A15F1BF1D90CC0C004464CB /* LaunchScreen.storyboard in Resources */,
 				1A15F22F1D9274A3004464CB /* 444.gif in Resources */,
 				1A15F1BC1D90CC0C004464CB /* Assets.xcassets in Resources */,
-				1A15F22D1D9274A3004464CB /* 222.gif in Resources */,
+				1A15F2371D927DC1004464CB /* 3.gif in Resources */,
+				1A15F2651D93CD16004464CB /* CWEatViewController.xib in Resources */,
 				1A15F1EB1D9106B1004464CB /* CWClipViewController.xib in Resources */,
+				1A15F2391D927DC1004464CB /* 11.gif in Resources */,
+				1A15F2381D927DC1004464CB /* 4.gif in Resources */,
 				1A15F1BA1D90CC0C004464CB /* Main.storyboard in Resources */,
+				1A15F2361D927DC1004464CB /* 2.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +386,7 @@
 				1A15F1F81D911146004464CB /* CWBezierPath.m in Sources */,
 				1A15F20C1D91192E004464CB /* CWFoldViewController.m in Sources */,
 				1A15F1E41D90E52C004464CB /* CWClockView.m in Sources */,
+				1A15F2641D93CD16004464CB /* CWEatViewController.m in Sources */,
 				1A15F2141D911CD1004464CB /* CWChangeView.m in Sources */,
 				1A15F21D1D911F3C004464CB /* ProgressView.m in Sources */,
 				1A15F1CF1D90DDC7004464CB /* ViewController.m in Sources */,
@@ -365,6 +396,7 @@
 				1A15F2111D911CC8004464CB /* CWRotateViewController.m in Sources */,
 				1A15F1F01D910DBF004464CB /* CWDrawViewController.m in Sources */,
 				1A15F1FA1D911146004464CB /* HandleView.m in Sources */,
+				1A15F2681D93CD31004464CB /* EatRotate.m in Sources */,
 				1A15F1F91D911146004464CB /* DrawView.m in Sources */,
 				1A15F1FF1D91148C004464CB /* CWQQViewController.m in Sources */,
 				1A15F2191D911F22004464CB /* CWDownProgressViewController.m in Sources */,
